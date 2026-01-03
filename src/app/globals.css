@@ -1,0 +1,240 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --carbon: #0d0d0d;
+  --graphite: #1a1a1a;
+  --slate: #2a2a2a;
+  --silver: #8a8a8a;
+  --ice: #f0f0f0;
+  --pure: #ffffff;
+  --accent: #fac70d;
+  --glow: #ffcc00;
+}
+
+html {
+  scroll-behavior: smooth;
+  -webkit-text-size-adjust: 100%;
+}
+
+body {
+  background-color: var(--carbon);
+  color: var(--ice);
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+/* Prevent horizontal scroll on mobile */
+body, html {
+  overflow-x: hidden;
+}
+
+/* Custom scrollbar */
+::-webkit-scrollbar {
+  width: 6px;
+}
+
+::-webkit-scrollbar-track {
+  background: var(--carbon);
+}
+
+::-webkit-scrollbar-thumb {
+  background: var(--slate);
+  border-radius: 3px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: var(--accent);
+}
+
+/* Better tap targets for mobile - minimum 44px */
+@layer base {
+  button, a, input, select, textarea {
+    min-height: 44px;
+  }
+  
+  /* Reset for inline links */
+  p a, span a {
+    min-height: auto;
+  }
+}
+
+/* Section transitions */
+.section-animate {
+  opacity: 0;
+  transform: translateY(40px);
+  transition: all 0.8s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.section-animate.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* Geometric decorations - angular like logo */
+.geo-diamond {
+  position: absolute;
+  border: 1px solid var(--slate);
+  transform: rotate(45deg);
+  opacity: 0.2;
+  pointer-events: none;
+}
+
+.geo-line {
+  position: absolute;
+  background: linear-gradient(to bottom, var(--accent), transparent);
+  width: 1px;
+  pointer-events: none;
+}
+
+/* Button styles with large border radius */
+.btn-primary {
+  @apply px-6 sm:px-8 py-3 sm:py-4 bg-accent text-carbon font-semibold tracking-wide rounded-5xl hover:bg-accent/90 transition-all duration-300 text-sm sm:text-base;
+  box-shadow: 0 0 20px rgba(0, 212, 255, 0.3);
+  -webkit-tap-highlight-color: transparent;
+}
+
+.btn-primary:hover {
+  box-shadow: 0 0 30px rgba(0, 212, 255, 0.5);
+  transform: translateY(-2px);
+}
+
+/* Remove hover transform on touch devices */
+@media (hover: none) {
+  .btn-primary:hover {
+    transform: none;
+  }
+}
+
+.btn-secondary {
+  @apply px-6 sm:px-8 py-3 sm:py-4 border border-ice/20 text-ice font-medium tracking-wide rounded-5xl hover:border-accent hover:text-accent transition-all duration-300 text-sm sm:text-base;
+  -webkit-tap-highlight-color: transparent;
+}
+
+.btn-ghost {
+  @apply px-4 sm:px-6 py-2 sm:py-3 text-ice/70 hover:text-accent transition-colors rounded-4xl;
+  -webkit-tap-highlight-color: transparent;
+}
+
+/* Nav dot indicator */
+.nav-dot {
+  position: relative;
+}
+
+.nav-dot::after {
+  content: '';
+  position: absolute;
+  bottom: -4px;
+  left: 50%;
+  transform: translateX(-50%) scale(0);
+  width: 4px;
+  height: 4px;
+  background: var(--accent);
+  border-radius: 50%;
+  transition: transform 0.3s ease;
+}
+
+.nav-dot:hover::after,
+.nav-dot.active::after {
+  transform: translateX(-50%) scale(1);
+}
+
+/* Grid pattern background */
+.grid-pattern {
+  background-image: 
+    linear-gradient(rgba(255,255,255,0.02) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(255,255,255,0.02) 1px, transparent 1px);
+  background-size: 40px 40px;
+}
+
+@media (min-width: 768px) {
+  .grid-pattern {
+    background-size: 60px 60px;
+  }
+}
+
+/* Gradient glow effects */
+.glow-accent {
+  box-shadow: 0 0 60px rgba(0, 212, 255, 0.15);
+}
+
+.glow-text {
+  text-shadow: 0 0 40px rgba(0, 212, 255, 0.5);
+}
+
+/* Modal overlay */
+.modal-overlay {
+  background: rgba(0, 0, 0, 0.8);
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
+}
+
+/* Form inputs - optimized touch targets */
+.form-input {
+  @apply w-full px-4 sm:px-5 py-3 sm:py-4 bg-slate/50 border border-slate rounded-2xl text-ice placeholder:text-silver focus:outline-none focus:border-accent transition-colors text-base;
+  -webkit-appearance: none;
+  appearance: none;
+}
+
+.form-select {
+  @apply w-full px-4 sm:px-5 py-3 sm:py-4 bg-slate/50 border border-slate rounded-2xl text-ice focus:outline-none focus:border-accent transition-colors appearance-none cursor-pointer text-base;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='24' height='24' viewBox='0 0 24 24' fill='none' stroke='%238a8a8a' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpolyline points='6 9 12 15 18 9'%3E%3C/polyline%3E%3C/svg%3E");
+  background-repeat: no-repeat;
+  background-position: right 1rem center;
+  background-size: 1.25rem;
+  -webkit-appearance: none;
+}
+
+/* Filter button */
+.filter-btn {
+  @apply px-4 sm:px-6 py-2 text-sm font-medium rounded-4xl transition-all duration-300;
+  -webkit-tap-highlight-color: transparent;
+}
+
+.filter-btn.active {
+  @apply bg-accent text-carbon;
+}
+
+.filter-btn:not(.active) {
+  @apply bg-slate/50 text-silver hover:text-ice hover:bg-slate;
+}
+
+/* Responsive typography helpers */
+@layer utilities {
+  .text-responsive-xl {
+    @apply text-3xl sm:text-4xl md:text-5xl lg:text-6xl;
+  }
+  
+  .text-responsive-2xl {
+    @apply text-4xl sm:text-5xl md:text-6xl lg:text-7xl;
+  }
+  
+  .text-responsive-3xl {
+    @apply text-5xl sm:text-6xl md:text-7xl lg:text-8xl;
+  }
+}
+
+/* Safe area padding for notched devices */
+@supports (padding: max(0px)) {
+  .safe-bottom {
+    padding-bottom: max(1rem, env(safe-area-inset-bottom));
+  }
+  
+  .safe-top {
+    padding-top: max(1rem, env(safe-area-inset-top));
+  }
+}
+
+/* Reduce motion for users who prefer it */
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+  
+  *, *::before, *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+  }
+}

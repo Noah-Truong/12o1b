@@ -1,0 +1,15 @@
+# Context
+- rework the information of the website according to the startup named 12o1b, a company driven towards creating AI products for clients
+
+## Frontend Tasks
+- [ ] ensure all of the information matches specifications of the company (email: 12o1b12o1bAI@gmail.com)
+- [ ] make a contact button that sends the user to send an email to 12o1b12o1bAI@gmail.com
+- [ ] make the them of the website match the logo.png in the assets folder
+- [ ] implement the animejs libary to create smooth scrolling animations
+- [ ] in the projects section make filter buttons: all, software, hardware
+- [ ] ensure all buttons have a large border radius
+- [ ] 'get in touch' button sends users to https://calendly.com/12o1b12o1bai/30min
+- [ ] implement a form for starting a project as part of the company's services (ask for first name, last name, company name, job title, work email, country - dropdown selection, budget - multiple choice, project details)
+- [ ] window for the form opens after clicking a button that says 'book demo' 
+## Backend Tasks
+- [ ] implement resend API for the form, have the API send all forms through email to 12o1b12o1bAI@gmail.com
