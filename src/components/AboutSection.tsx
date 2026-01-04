@@ -73,7 +73,7 @@ export default function AboutSection() {
               12o1b is an innovative AI company dedicated to creating solutions for clients.
             </p>
             <p className="about-animate opacity-0 text-silver text-base sm:text-lg leading-relaxed">
-              Our team UC Berkeley students are seeking
+              Our team of UC Berkeley students are seeking
               to deliver solutions that are not just technologically advanced, 
               but also intuitive and impactful.
             </p>
@@ -86,15 +86,15 @@ export default function AboutSection() {
             {
               title: 'Innovation',
               description:
-                'We push the boundaries of what AI can achieve, constantly exploring new techniques and technologies.',
+                'We push the boundaries of what AI can achieve, constantly exploring efficient and practical designs for agents.',
             },
             {
               title: 'Reliability',
               description:
-                'Our solutions are built to perform consistently, with robust architecture and thorough testing.',
+                'Our solutions (fullstack systems, APIs, etc.) are built to perform consistently, with robust architecture and thorough testing.',
             },
             {
-              title: 'Partnership',
+              title: 'Collaboration',
               description:
                 'We work closely with clients to understand their needs and deliver solutions that truly fit.',
             },

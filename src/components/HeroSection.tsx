@@ -113,8 +113,8 @@ export default function HeroSection({ onNavigate, onBookDemo }: HeroSectionProps
         {/* Description */}
         <p className="hero-description opacity-0 max-w-2xl mx-auto text-silver text-base sm:text-lg md:text-xl leading-relaxed mb-8 sm:mb-12 px-2">
           We create cutting-edge AI products that transform businesses. 
-          From intelligent automation to machine learning solutions, 
-          we bring your vision to life with advanced technology.
+          From API implementation to fullstack systems, 
+          we bring data to life.
         </p>
 
         {/* CTA Buttons */}
