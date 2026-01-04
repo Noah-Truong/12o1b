@@ -81,7 +81,7 @@ export default function ContactSection() {
             <span className="text-accent glow-text">solutions</span>
           </h2>
           <p className="contact-animate opacity-0 text-silver text-base sm:text-lg md:text-xl leading-relaxed mb-8 sm:mb-12 max-w-2xl mx-auto px-2">
-            Ready to transform your business with agentic solutions?
+            Ready to transform your business with agentic systems?
           </p>
 
           {/* Contact options */}
