@@ -50,7 +50,6 @@ export default function Home() {
       />
       <HeroSection onNavigate={scrollToSection} onBookDemo={() => setIsModalOpen(true)} />
       <AboutSection />
-      <WorkSection />
       <ServicesSection onBookDemo={() => setIsModalOpen(true)} />
       <ContactSection />
       <BookDemoModal isOpen={isModalOpen} onClose={() => setIsModalOpen(false)} />

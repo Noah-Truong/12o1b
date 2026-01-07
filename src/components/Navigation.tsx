@@ -12,7 +12,6 @@ interface NavigationProps {
 const navItems = [
   { id: 'hero', label: 'Home' },
   { id: 'about', label: 'About' },
-  { id: 'work', label: 'Projects' },
   { id: 'services', label: 'Services' },
   { id: 'contact', label: 'Contact' },
 ]
