@@ -9,6 +9,13 @@ interface ServicesSectionProps {
 
 const services = [
   {
+    id: 'data',
+    title: 'Data Management',
+    description:
+    'Data management products tailored to your business needs. From data cleaning to data analysis, we build intelligent solutions that help you make data-driven decisions.',
+    items: ['Data Cleaning', 'Data Analysis', 'Data Visualization', 'Data Storage'],
+  },
+  {
     id: 'ml',
     title: 'Machine Learning Solutions',
     description:

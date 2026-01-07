@@ -111,7 +111,8 @@ export default function HeroSection({ onNavigate, onBookDemo }: HeroSectionProps
         </h1>
 
         {/* Description */}
-        <p className="hero-description opacity-0 max-w-2xl mx-auto text-white text-base sm:text-lg md:text-xl leading-relaxed mb-8 sm:mb-12 px-2">
+        <p className="hero-description opacity-0 max-w-2xl mx-auto text-white text-base sm:text-lg md:text-xl leading-relaxed mb-8 sm:mb-12 px-2"
+        >
           We create cutting-edge AI products that transform businesses. 
           From API implementation to fullstack systems, 
           we bring data to life.
