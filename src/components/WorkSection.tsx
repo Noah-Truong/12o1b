@@ -17,12 +17,12 @@ interface Project {
 
 const projects: Project[] = [
   {
-    title: '[Project Title]',
-    category: 'all',
-    description: '[Project description goes here]',
+    title: 'Interview AI (Demo)',
+    category: 'software',
+    description: 'A job interview preperation tool, this is currently just a design concept',
     year: '2026',
-    image: null, // Replace with '/images/project1.jpg' when you have an image
-    link: '#', // Replace with actual project URL
+    image: '/interviewAI.png', 
+    link: 'https://interview-ai-blue-rho.vercel.app/', // Replace with actual project URL
   },
   // Add more projects here:
   // {
