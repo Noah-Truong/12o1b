@@ -105,7 +105,7 @@ This message was sent from the 12o1b website contact form.
 
     const { error } = await resend.emails.send({
       from: 'Contact Form <onboarding@resend.dev>',
-      to: ['noahtruong123@gmail.com'],
+      to: ['12o1b12o1bAI@gmail.com'],
       subject: `New Project Inquiry from ${firstName} ${lastName} - ${companyName}`,
       text: emailContent,
       html: htmlContent,
